@@ -114,7 +114,7 @@ exports.searchStores = async (req, res) => {
   // the sort them
   .sort({
     score: { $meta: 'textScore' }
-  });
+  })
   // limit to only 5 result
   .limit(5);
   res.json(stores);
